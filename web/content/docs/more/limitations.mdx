@@ -1,0 +1,20 @@
+---
+title: Limitations
+description: What Prior does not do, and where it departs from the spec.
+---
+
+## What it does not do
+
+- **It proves who sealed first, not who wrote it,** and it gives no legal rights.
+- **A revealed text is public.** Seal a description, not a secret.
+- **Overlap is a judgment, and a model can be wrong.** In the evaluation the validators answered PARTIAL where the spec expected NONE on two short, generic later texts. Those misses are published, and the prompt was not changed to fit them.
+- **A broad entry earns PARTIAL at most.** The prompt ignores what is common in the field.
+- **Test GEN has no value.** The money mechanics are real; the money on Studio Next is not.
+- **Seals are for text only.** Seals cannot carry a file or an image, and the judge compares two texts of at most 1,500 characters each.
+
+## Where this build differs from the spec
+
+1. **The runtime header.** The spec names `py-genlayer:5jycge4q…`. Studio Next now rejects that hash (`invalid_contract runner malformed`), so the contract is pinned to the runner the network itself resolves `latest` to today. See [Addresses](/docs/reference/addresses).
+2. **A 48 hour bound on reading.** A challenge nobody could read is voided with its stake returned, and the pair can be filed again, so no money waits forever. This adds a fifth outcome, VOID, that is not one of the four verdicts.
+3. **An exact text.** The seal is over the text exactly as written. A reveal that differs by one space does not match.
+4. **Stretch goals are not built:** entry versions, group entries, embeds and format registries.

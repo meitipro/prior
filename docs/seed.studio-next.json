@@ -1,0 +1,17 @@
+{
+  "steps": {
+    "sealed_only": {
+      "ok": true,
+      "tx": "0x88d06644217702181b3139045f5f00db10fd0251894c65d8b7c261b754a53e1a",
+      "entry": 15,
+      "revealed": false
+    },
+    "withdraw_golden_author": {
+      "ok": true,
+      "tx": "0x48db1207d52fa4bb68901bc302ed7e7bedab569e75c58663c0243617f053949d",
+      "owed": "63000000000000000000",
+      "balance_before": "932998820469499957655",
+      "balance_after_finality": "995998694163249954832"
+    }
+  }
+}

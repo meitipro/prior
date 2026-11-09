@@ -1,0 +1,15 @@
+{
+  "title": "Prior docs",
+  "pages": [
+    "---Getting started---",
+    "index",
+    "quickstart",
+    "challenge-a-copy",
+    "---Concepts---",
+    "...concepts",
+    "---Reference---",
+    "...reference",
+    "---More---",
+    "...more"
+  ]
+}

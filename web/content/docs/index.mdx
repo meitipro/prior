@@ -1,0 +1,33 @@
+---
+title: Introduction
+description: A priority registry for ideas and written work, on GenLayer Studio Next.
+---
+
+Prior lets an author seal a description of an idea, a format or a piece of writing with a bond. The chain stamps the date and the text stays hidden until the author chooses to reveal it. When a later entry looks like a copy, the earlier author stakes a challenge, GenLayer validators compare the two texts, and a date on chain plus a neutral reading of two texts replace a quarrel in a thread.
+
+<Callout title="The question validators answer">
+  Does this later text reproduce the substance of that earlier one, beyond what everyone in the field already knows?
+</Callout>
+
+## Who it is for
+
+- **Writers and builders** who want a dated seal that reveals nothing until they choose, and a real way to challenge a copy.
+- **Communities and DAOs** that want a neutral record of who proposed a format or campaign first, before credit becomes a feud.
+- **Readers**, who see on every entry whether it overlaps an earlier one.
+
+## One dispute, start to finish
+
+1. The author **seals** a description: a hash of text, salt and address, with a bond of at least 2 GEN. The chain stamps the date.
+2. When ready, the author **reveals** the text. The contract checks it against the seal; the date never moves.
+3. When a later entry looks like a copy, the earlier author **challenges** it with a stake of 5 GEN.
+4. Validators **read** the two texts, never the dates or names, and agree on one label: SUBSTANTIAL, PARTIAL or NONE.
+5. The contract turns the label and the seal dates into a verdict and **marks** the later entry. `withdraw` is the only call that pays.
+
+## What Prior is not
+
+- Not a patent or a copyright. It records who sealed first and who overlaps, and gives no legal rights.
+- Not proof of authorship. Someone could seal another person's unpublished idea; Prior cannot tell, and says so on every entry.
+- Not a plagiarism scanner. It never reads the web, it compares two registered texts.
+- Not private once revealed. A revealed text is public, so seal the description, not the secret.
+
+Start with the [Quickstart](/docs/quickstart), or read [the judge prompt, word for word](/docs/more/judge-prompt).

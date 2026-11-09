@@ -1,0 +1,32 @@
+
+H1 Held out: a monthly digest with a turnout chart (expected EITHER)
+  register 0x9042b9544a669f98655db6dd7a64f7ae52bc460fe8a95b7949799e69a006d42d
+  reveal 0xa6bdb868ff725cea1641997b6e46ba2322a84bbb6f3aaafbea6ca7675c48e178
+  sealed and revealed as entry 12  https://explorer-studio-dev.genlayer.com/tx/0x9042b9544a669f98655db6dd7a64f7ae52bc460fe8a95b7949799e69a006d42d
+  challenge 0x3c8f431e72f6bd28fc42aaae04dcaa5a7f7e801c2185a02b0cfab9a52d32ffdc
+  challenged as 11  https://explorer-studio-dev.genlayer.com/tx/0x3c8f431e72f6bd28fc42aaae04dcaa5a7f7e801c2185a02b0cfab9a52d32ffdc
+  judge 0x7095aa728ae4f697839dc0326dc3b586927675b6d1c31ab2f92fe5ffb5588c92
+  MATCH PARTIAL -> RELATED
+  https://explorer-studio-dev.genlayer.com/tx/0x7095aa728ae4f697839dc0326dc3b586927675b6d1c31ab2f92fe5ffb5588c92
+
+H2 Held out: summary plus how large holders voted, no pattern note (expected EITHER)
+  register 0xa3d7c80b5db17500c8ac06955fc202f80b499dcf121ac8800eb3ac2fa83e0e7c
+  reveal 0x14baccc80b84cca2d1c534364024628323b7e2d6e2d72f954fca0beffa3894e9
+  sealed and revealed as entry 13  https://explorer-studio-dev.genlayer.com/tx/0xa3d7c80b5db17500c8ac06955fc202f80b499dcf121ac8800eb3ac2fa83e0e7c
+  challenge 0xae1a4ec6a9be89064a04173596d370d18c8c734e63fa13478c1b532781695403
+  challenged as 12  https://explorer-studio-dev.genlayer.com/tx/0xae1a4ec6a9be89064a04173596d370d18c8c734e63fa13478c1b532781695403
+  judge 0xaa0c7478a3f74b4218b1a9ca4f26dc38ca3b3c30da3211b4bc019792f3c3c859
+  MATCH PARTIAL -> RELATED
+  https://explorer-studio-dev.genlayer.com/tx/0xaa0c7478a3f74b4218b1a9ca4f26dc38ca3b3c30da3211b4bc019792f3c3c859
+
+H3 Held out: a thread explaining votes (expected EITHER)
+  register 0x27446d1e1e2c0807942576c197258f627a1cb53fb8e8f2a66f935197d8ab3ef2
+  reveal 0x3ddf7f91cacda222a88815118963c9f0dc0f3522299d0c8b810a436951e9ed42
+  sealed and revealed as entry 14  https://explorer-studio-dev.genlayer.com/tx/0x27446d1e1e2c0807942576c197258f627a1cb53fb8e8f2a66f935197d8ab3ef2
+  challenge 0xe0ad768a1511a92b251d7dceaba76e89cf69e7065d36a4eedebeafb9bb7d88a8
+  challenged as 13  https://explorer-studio-dev.genlayer.com/tx/0xe0ad768a1511a92b251d7dceaba76e89cf69e7065d36a4eedebeafb9bb7d88a8
+  judge 0x5fc96a205838c6a57ce6f180d8ddff4648e61995ec9dd40a1ba7519a67506169
+  MATCH PARTIAL -> RELATED
+  https://explorer-studio-dev.genlayer.com/tx/0x5fc96a205838c6a57ce6f180d8ddff4648e61995ec9dd40a1ba7519a67506169
+
+wrote eval/results.md: golden 8/10

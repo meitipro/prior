@@ -1,0 +1,27 @@
+---
+title: The four results
+description: PRIOR, RELATED, CLEARED and SEASONED, and what each does with the money.
+---
+
+The model answers one label. The **verdict is computed in code** from the label and from the seal dates.
+
+| Verdict | When | Money | Record |
+|---|---|---|---|
+| **PRIOR** | The label is SUBSTANTIAL | Stake back, plus the later entry's bond (if it was inside its 90 days) | The later entry is marked as overlapping the first |
+| **RELATED** | The label is PARTIAL | Stake back, the bond stays | Both entries show a related note |
+| **CLEARED** | The label is NONE | The stake goes to the accused | The later entry shows it was challenged and cleared |
+| **SEASONED** | 90 days pass with no upheld challenge | The bond returns to its author | A clean record on the entry |
+
+## The labels
+
+- **SUBSTANTIAL**: TEXT 2 contains the core of TEXT 1, its central idea, method or distinctive parts, in any wording, order or language, even if it adds more.
+- **PARTIAL**: TEXT 2 shares some parts of TEXT 1 but not its core, or only the general idea without the distinctive parts.
+- **NONE**: they share nothing beyond what is common in the field.
+
+## After 90 days
+
+A challenge can still mark a later entry after its 90 days, but there is no bond to win, so the stake is returned. The mark is the point.
+
+## One addition to the spec
+
+A challenge that nobody could get a verdict for within 48 hours is voided by the next `judge` call: no model runs, the stake goes back, and the pair can be filed again. See [Limitations](/docs/more/limitations).

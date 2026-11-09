@@ -1,0 +1,26 @@
+---
+title: Sealing and revealing
+description: How a seal works, what the chain stores, and why you must keep your ticket.
+---
+
+An **entry** is a text of at most 1,500 characters, sealed as the sha256 of the text, a salt and the author's address (see [Hashing](/docs/reference/hashing)). The chain stores the seal, the author's bond and the **chain time of the transaction** as the date. It never sees the text.
+
+## The ticket
+
+Your text and your salt are the only things that can reveal the seal. The site keeps them in your browser's local storage as a **ticket**, never sends them anywhere, and offers a download. Lose both and the seal can never be revealed; that is what makes it a seal.
+
+<Callout type="warn" title="A revealed text is public">
+  Seal a description of your idea, not a secret.
+</Callout>
+
+## Revealing
+
+`reveal(entry_id, text, salt)` is open to the entry's author at any time. The contract hashes what you send and checks it against the seal. A reveal **never changes the date**, so revealing late costs you nothing in priority.
+
+## Why the address is in the seal
+
+A copyist who watches a reveal cannot take the seal and claim it: their address would change the hash. They can only seal their own version, which is **later by chain time**, so the original stays first whatever they do next.
+
+## Seasoning
+
+An entry that has been sealed for 90 days with no challenge waiting and nothing upheld against it can be closed by anyone. It becomes **SEASONED** and its bond goes back to its author.

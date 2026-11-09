@@ -1,0 +1,26 @@
+---
+title: Bonds and stakes
+description: What the bond and the stake are for, and where the money is at every step.
+---
+
+## The bond
+
+Every entry costs a bond of at least 2 GEN. It makes hoarding dates costly: sealing many vague entries to own priority on everything loses to a specific copy as PARTIAL or NONE. The bond returns after 90 days if nothing is upheld against the entry, and goes to the challenger if the entry is upheld as a copy while still inside its 90 days.
+
+## The stake
+
+A challenge costs exactly 5 GEN, paid by the author of the earlier entry. Challenging many entries to see what sticks is a losing game: a CLEARED challenge pays the accused, and a pair can be challenged once.
+
+## The books always add up
+
+The contract keeps five counters, and a test asserts after nearly every step that
+
+```text
+received == bonds_left + stakes_held + owed + paid
+```
+
+Everything that came in (bonds and stakes) is still in a bond, held as the stake of an open challenge, credited to an account and not yet withdrawn, or paid out.
+
+## Only withdraw pays
+
+`reveal`, `judge` and `close_entry` only move balances inside the contract. `withdraw()` is a top-level transfer of the caller's whole balance to the caller, with the balance cleared before the value leaves. On consensus v0.6 a transfer can only be funded at the root of the transaction that starts it, which is why a verdict never pays directly.
