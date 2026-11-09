@@ -9,7 +9,7 @@
 - [x] `web/`: every page of section 6 with genlayer-js 2.0.0-rc.1
 - [x] `/docs`: every page of section 7, generated reference, plus `/llms.txt`
 - [x] `scripts/seed.py`, README, `submission/`
-- [ ] Repository on GitHub
-- [ ] Site on Vercel
-- [ ] Reviewer path on the live site from fresh accounts
+- [x] Repository public: https://github.com/meitipro/prior
+- [x] Site on Vercel: https://prior-genlayer.vercel.app
+- [x] Reviewer path on the live site from fresh accounts
 - [ ] Portal entry sent, X post, demo recorded: only the user can do these (`HANDOFF.md`)

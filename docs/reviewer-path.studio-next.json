@@ -1,0 +1,96 @@
+{
+  "site": "https://prior-genlayer.vercel.app",
+  "contract": "0xCc03C597dE98A0ecDEFBd500bbCF6314fCf03da4",
+  "started": "2026-11-09T13:36:54.879Z",
+  "steps": [
+    {
+      "step": "faucet",
+      "account": "reviewer_author_202611091336",
+      "address": "0xfe19787f6EebAfB9b61a9c25A9579f33a1257Bc7",
+      "from": "0",
+      "to": "20000000000000000000",
+      "note": "a lowercase address, checksummed by the route"
+    },
+    {
+      "step": "faucet",
+      "account": "reviewer_copyist_202611091336",
+      "address": "0x222Ad395f09099ECd9DC0E343e8EBBCAefA2d2a4",
+      "from": "0",
+      "to": "20000000000000000000",
+      "note": "a lowercase address, checksummed by the route"
+    },
+    {
+      "step": "register",
+      "entryId": 20,
+      "hash": "0xd912348ae688caa4d8a048ae249fbe7110025501309c724de57649ea3e7b82af",
+      "sealed_at": 1794231422,
+      "note": "the seal computed by the site code is the seal on chain, and the text is not"
+    },
+    {
+      "step": "reveal_wrong_text",
+      "hash": "0x71c9d95c099c1f72e2655fe947c75da22006fc871e0f64a0978a9227abae7d13",
+      "refusal": "this text and salt do not match the seal",
+      "note": "refused with the contract's own sentence, accepted but not a success"
+    },
+    {
+      "step": "reveal",
+      "entryId": 20,
+      "hash": "0xec2611e90464a47713ed8c2c8b1529bf40c7ae5adb2d5a99597e500c5f3be740",
+      "date_unchanged": true
+    },
+    {
+      "step": "copy_sealed",
+      "entryId": 21,
+      "hash": "0x3e6bd83b5712f79de7807fcd11ff806e4051d5c79875259a68eab47ec4f2526c",
+      "seconds_later": 26
+    },
+    {
+      "step": "challenge_by_the_wrong_author",
+      "hash": "0x600c0479b9ae776a9c0d32842b7fe4a996c71876c1383339d2f5e8f146f88300",
+      "refusal": "only the author of the earlier entry may file the challenge"
+    },
+    {
+      "step": "challenge",
+      "challengeId": 16,
+      "hash": "0xd3b8d2b0170e69b89cce825c0bb009359a2e88bee1d4c21dab998f2e72af74e8"
+    },
+    {
+      "step": "judge",
+      "challengeId": 16,
+      "hash": "0x7649b70f9b3777b5bc4e8536f5f6cc262d1d7e45fc996bd9236c7a2447a3d19a",
+      "label": "SUBSTANTIAL",
+      "verdict": "PRIOR",
+      "to_challenger": "7000000000000000000",
+      "b_marked_overlapping": 20
+    },
+    {
+      "step": "books",
+      "entries": 21,
+      "challenges": 16,
+      "received": "122000000000000000000",
+      "bonds_left": "28000000000000000000",
+      "stakes_held": "0",
+      "owed": "17000000000000000000",
+      "paid": "77000000000000000000",
+      "note": "received = bonds_left + stakes_held + owed + paid"
+    },
+    {
+      "step": "withdraw",
+      "hash": "0xc5a7aa90079d4f5fd5d4e54b0b570a99b8cab37a27b9f598e6e255ce63ce5b8d",
+      "owed": "7000000000000000000",
+      "wallet_before": "12999606749499985885",
+      "wallet_after_finality": "19999480442999983062",
+      "gained": "6999873693499997177",
+      "fee_difference": "126306500002823",
+      "final_status": "FINALIZED",
+      "note": "the wallet gains what was owed, less the fee of the withdraw transaction"
+    },
+    {
+      "step": "pages",
+      "checked": 14,
+      "all": 200,
+      "challenge_page_shows": "SUBSTANTIAL → PRIOR"
+    }
+  ],
+  "finished": "2026-11-09T13:39:35.981Z"
+}

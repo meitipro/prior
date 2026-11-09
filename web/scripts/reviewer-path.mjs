@@ -65,6 +65,18 @@ async function write(name, method, args, value = 0n, expectRefusal = false) {
   return { hash, outcome, client };
 }
 
+/** waitFinal that survives this machine's flaky connection: any error is retried, up to 25 times. */
+async function finalize(client, hash) {
+  for (let i = 0; ; i++) {
+    try {
+      return await waitFinal(client, hash);
+    } catch (error) {
+      if (i >= 25) throw error;
+      await new Promise((r) => setTimeout(r, 5000));
+    }
+  }
+}
+
 const view = async (method, args) => JSON.parse(await retried(() => reader.readContract({ address: CONTRACT, functionName: method, args }), 4));
 
 // -- accounts and the site's faucet -----------------------------------------------------
@@ -128,10 +140,10 @@ say('books', { ...totals, note: 'received = bonds_left + stakes_held + owed + pa
 const listing = await view('list_entries', [authorAddr.toLowerCase(), 0, 5]);
 const owed = BigInt(listing.balance);
 if (owed !== BigInt(c1.to_challenger)) fail('balance', `the contract owes ${owed}, the verdict credits ${c1.to_challenger}`);
-for (const { hash, client } of sent[AUTHOR]) await waitFinal(client, hash);
+for (const { hash, client } of sent[AUTHOR]) await finalize(client, hash);
 const walletBefore = await balanceOf(authorAddr);
 const withdrawn = await write(AUTHOR, 'withdraw', []);
-const final = await waitFinal(withdrawn.client, withdrawn.hash);
+const final = await finalize(withdrawn.client, withdrawn.hash);
 const walletAfter = await balanceOf(authorAddr);
 const gained = walletAfter - walletBefore;
 say('withdraw', { hash: withdrawn.hash, owed: owed.toString(), wallet_before: walletBefore.toString(), wallet_after_finality: walletAfter.toString(), gained: gained.toString(), fee_difference: (owed - gained).toString(), final_status: outcomeOf(final).status, note: 'the wallet gains what was owed, less the fee of the withdraw transaction' });
